@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pandas import DataFrame
 from pymongo_get_database import get_database
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from pymongo_get_database import CONNECTION_STRING
 from flask import request
 app = Flask(__name__)
@@ -50,7 +50,7 @@ item_5 = {
   "Market_price" : 308.78 ,
   "Float_cap" : "0-0.7"
 }
-collection_name.insert_many([item_1,item_2, item_3, item_4, item_5])
+#collection_name.insert_many([item_1,item_2, item_3, item_4, item_5])
 #item_details = collection_name.find()
 #items_df = DataFrame(item_details)
 #print(items_df)
