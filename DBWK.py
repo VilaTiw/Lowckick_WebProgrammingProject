@@ -78,4 +78,4 @@ def index():
     data = collection_name.find({})
     return render_template('HTMLPage2_DB.html', data=data)
 if __name__ == '__main__':
-    app.run(port='8000',debug=True)
+    app.run()
