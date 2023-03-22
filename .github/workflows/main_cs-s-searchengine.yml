@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'CS-S-SearchEngine'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8D777D4B49BB475B89AB4553B541B4B3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_883DDCCE8D8A41628E21DA715C04EAB9 }}
