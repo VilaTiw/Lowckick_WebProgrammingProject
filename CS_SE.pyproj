@@ -22,9 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CS_SE.py" />
+    <Compile Include="DBU.py" />
     <Compile Include="DBWK.py" />
-    <Compile Include="pymongo_get_database.py" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="Global|PythonCore|3.11" />
