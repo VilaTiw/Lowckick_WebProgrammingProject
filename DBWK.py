@@ -42,5 +42,8 @@ def index():
 
     data = collection_name.find({})
     return render_template('HTMLPage2_DB.html', data=data)
+@app.route('/', methods=['GET'])
+def index2():
+    return render_template('HTMLPage1.html')
 if __name__ == '__main__':
     app.run()
