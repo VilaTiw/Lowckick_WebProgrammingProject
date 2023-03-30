@@ -13,10 +13,17 @@ README:
 Right now there is a bug or code problem with deploying, but you can still launch it on your local host. Just launch code in your chosen environment and it will get it done and will give you localhost link(default localhost:5000)
 
 
-DEBUGING+Minidevblog:
+DEBUGING:
 Need to deploy it at least somewhere. There is a problem with that, it`s just didn`t launching. Will optimize code and files, check it again. If still won`t be working, should thing about something else. Maybe swithcing to Jango, not sure yet.
 Right now project is deployed to Heroku, just to be sure it`s working(spoiler:it is). 
-Learned a bit about Steam Api, used it to collect info about 100 market items, insert it into mongodb and configure to be shown on web-site.
+
+DEVBLOG:
+This is student project associated with my hobby(CS:GO skins and its market). Right now its in early development stage, but it must be a kind of search engine/items  
+database(aint sure about balance yet). 
+
+28.03.23 It`s written on Python Flask framework + MongoDB. Should be deployed on Azure, but some problems was met, so right now it is deployed on heroku.
+
+29-30.03.23 Learned a bit about Steam Api, used it to collect info about 100 market items, insert it into mongodb and configure to be shown on web-site.
 Configure Gunicorn for Heroku deployment.
 
 Technology used for now:
