@@ -22,6 +22,8 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app.py" />
+    <Compile Include="config.py" />
     <Compile Include="DBU.py" />
     <Compile Include="DBWK.py" />
   </ItemGroup>
@@ -29,6 +31,7 @@
     <InterpreterReference Include="Global|PythonCore|3.11" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="About.html" />
     <Content Include="HTMLPage1.html" />
     <Content Include="HTMLPage2_DB.html" />
   </ItemGroup>
