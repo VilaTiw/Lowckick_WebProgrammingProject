@@ -1,23 +1,22 @@
-CS Search Engine
+### CS Search Engine
 
-ROADMAP: :white_check_mark:
-1. Finish Azure deploying with CI/CD    ///Still need to finish deploying and fixing deploy bug(check debuging block) ----Problems with it
-2. SteamAPI connecting    ///Need to learn more about SteamAPI and viewall request to get all needed info ---- Finished page 
-3. Database establishing    ///After gettting along with API, i need to create a functionality to save&update mongodb database ---- Almost there
-4. Creating search engine    /// Must create a base search engine for a future establishing  ---- Haven`t started yet
-5. Configurating engine for our purposes    ///Created for CS skins, must work with them, some search algorithm and sites rating will be needed ---- Haven`t started yet
-6. Creating a better and unique design ///After finishing backend it will important to create design for a site ---- High priority
+## ROADMAP:
+1. Finish Azure deploying with CI/CD    ///Still need to finish deploying and fixing deploy bug(check debuging block) :heavy_exclamation_mark:
+2. SteamAPI connecting    ///Need to learn more about SteamAPI and viewall request to get all needed info :white_check_mark:
+3. Database establishing    ///After gettting along with API, i need to create a functionality to save&update mongodb database :white_check_mark:
+4. Creating search engine    /// Must create a base search engine for a future establishing  :soon:
+5. Configurating engine for our purposes    ///Created for CS skins, must work with them, some search algorithm and sites rating will be needed 🔲:
+6. Creating a better and unique design ///After finishing backend it will important to create design for a site :white_check_mark:
 
-
-README:
+## README:
 Right now there is a bug or code problem with deploying, but you can still launch it on your local host. Just launch code in your chosen environment and it will get it done and will give you localhost link(default localhost:5000)
 
 
-DEBUGING:
+## DEBUGING:
 Need to deploy it at least somewhere. There is a problem with that, it`s just didn`t launching. Will optimize code and files, check it again. If still won`t be working, should thing about something else. Maybe swithcing to Jango, not sure yet.
 Right now project is deployed to Heroku, just to be sure it`s working(spoiler:it is). 
 
-DEVBLOG:
+## DEVBLOG:
 This is student project associated with my hobby(CS:GO skins and its market). Right now its in early development stage, but it must be a kind of search engine/items  
 database(aint sure about balance yet). 
 
@@ -28,7 +27,7 @@ Configure Gunicorn for Heroku deployment.
 
 11.04.23 Ended resource limits for Heroku, but project was updated, so i think it will work better on other deployment services. Finished with steam auth info, trying dmarketAPI and working on better style
 
-Technology used for now:
+## Technology used for now:
 1. Python
 2. MongoDB
 3. Visual Code
