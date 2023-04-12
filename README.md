@@ -1,12 +1,12 @@
 CS Search Engine
 
 ROADMAP:
-1. Finish Azure deploying with CI/CD    ///Still need to finish deploying and fixing deploy bug(check debuging block)
-2. SteamAPI connecting    ///Need to learn more about SteamAPI and viewall request to get all needed info
-3. Database establishing    ///After gettting along with API, i need to create a functionality to save&update mongodb database
-4. Creating search engine    /// Must create a base search engine for a future establishing
-5. Configurating engine for our purposes    ///Created for CS skins, must work with them, some search algorithm and sites rating will be needed
-6. Creating a better and unique design ///After finishing backend it will important to create design for a site
+1. Finish Azure deploying with CI/CD    ///Still need to finish deploying and fixing deploy bug(check debuging block) ----Problems with it
+2. SteamAPI connecting    ///Need to learn more about SteamAPI and viewall request to get all needed info ---- Finished page 
+3. Database establishing    ///After gettting along with API, i need to create a functionality to save&update mongodb database ---- Almost there
+4. Creating search engine    /// Must create a base search engine for a future establishing  ---- Haven`t started yet
+5. Configurating engine for our purposes    ///Created for CS skins, must work with them, some search algorithm and sites rating will be needed ---- Haven`t started yet
+6. Creating a better and unique design ///After finishing backend it will important to create design for a site ---- High priority
 
 
 README:
@@ -25,6 +25,8 @@ database(aint sure about balance yet).
 
 29-30.03.23 Learned a bit about Steam Api, used it to collect info about 100 market items, insert it into mongodb and configure to be shown on web-site.
 Configure Gunicorn for Heroku deployment.
+
+11.04.23 Ended resource limits for Heroku, but project was updated, so i think it will work better on other deployment services. Finished with steam auth info, trying dmarketAPI and working on better style
 
 Technology used for now:
 1. Python
