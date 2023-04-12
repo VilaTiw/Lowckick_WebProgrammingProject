@@ -1,6 +1,6 @@
 CS Search Engine
 
-ROADMAP:
+ROADMAP: :white_check_mark:
 1. Finish Azure deploying with CI/CD    ///Still need to finish deploying and fixing deploy bug(check debuging block) ----Problems with it
 2. SteamAPI connecting    ///Need to learn more about SteamAPI and viewall request to get all needed info ---- Finished page 
 3. Database establishing    ///After gettting along with API, i need to create a functionality to save&update mongodb database ---- Almost there
