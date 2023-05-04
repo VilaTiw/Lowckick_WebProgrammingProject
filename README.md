@@ -27,6 +27,8 @@ Configure Gunicorn for Heroku deployment.
 
 11.04.23 Ended resource limits for Heroku, but project was updated, so i think it will work better on other deployment services. Finished with steam auth info, trying dmarketAPI and working on better style
 
+04.05.23 Established database view from dmarketAPI and getting info from api url. Decided to get only dmarketAPI info.
+
 ## Technology used for now:
 1. Python
 2. MongoDB
