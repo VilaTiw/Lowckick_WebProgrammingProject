@@ -14,6 +14,8 @@ oauth = OAuth(app)
 steam_openid_url = 'https://steamcommunity.com/openid/login'
 dbname=get_database()
 collection_name = dbname["user_1_items"]
+collection_name2 = dbname["market_items"]
+
 
 
 
@@ -41,6 +43,34 @@ def index():
 
     data = collection_name.find({})
     return render_template('bootstraptest.html', data=data)
+
+@app.route('/HTMLPage2_DMDB.html', methods=['GET', 'POST'])
+def index44():
+    if request.method == 'POST':
+        i=0
+        while i<50:
+            name = request.form['objects'][i]['title']
+            price = request.form['objects'][i]['price']['USD']
+            suggested_price = request.form['objects'][i]['suggestedPrice']['USD']
+            quality = request.form['objects'][i]['quality']
+            type = request.form['objects'][i]['categoryPath']
+            icon_url = request.form['objects'][i]['image']
+            i+=1
+
+        new_item = {
+            'name': name,
+            'price': price,
+            'suggested_price': suggested_price,
+            'quality': quality,
+            'type': type,
+            'icon_url': icon_url,
+        }
+        
+
+        collection_name2.insert_one(new_item)
+
+    data = collection_name2.find({})
+    return render_template('HTMLPage2_DMDB.html', data=data)
 
 @app.route('/HTMLPage1.html', methods=['GET'])
 def index2():

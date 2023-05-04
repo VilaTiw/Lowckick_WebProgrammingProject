@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Database</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style2.css') }}" />
+</head>
+<body>
+    <header>
+        <h1>CS:GO Skins Database</h1>
+    </header>
+    <a href="localhost:5000/HTMLPage1.html" id="database-link">Search Engine</a
+    href="http://localhost:5000/auth"><img alt=""
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Steam_logo.svg/2560px-Steam_logo.svg.png" style="height:30px; width:80px" /></a></p>
+
+    <footer>
+        <p>© 2023 CS:GO SE Holovko Uaroslav</p>
+        <a href="localhost:5000/About.html" id="about-link"></a>
+    </footer>
+    <table>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Listings</th>
+                <th>Sell price</th>
+                <th>Buyorder price</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+            <tr>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['sell_listings'] }}</td>
+                <td>{{ item['sell_price_text'] }}</td>
+                <td>{{ item['sale_price_text'] }}</td>
+                <td>{{ item['asset_description']['type'] }}</td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <form action="#" method="POST">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="sell_listing">Listings:</label>
+        <input type="number" id="listings" name="listings" required><br><br>
+
+        <label for="sell_price_text">Sell price:</label>
+        <input type="text" id="sell price" name="sell price" step="0.00000000000001" required><br><br>
+
+        <label for="sale_price_text">Buyorder price:</label>
+        <input type="text" id="buyorder price" name="buyorder price" step="0.00000000000001" required><br><br>
+        
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" step="0.01" required><br><br>
+
+        <label for="image">Icon:</label>
+        <input type="url" id="icon_url" name="icon_url" required><br><br>
+
+        <input type="submit" value="Add Item">
+    </form>
+</body>
+</html>

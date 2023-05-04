@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fd8fc4a8-dfd0-4330-b4ef-a244bc3771bf</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>targetCreator.py</StartupFile>
+    <StartupFile>DBWK.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -26,7 +26,7 @@
     <Compile Include="config.py" />
     <Compile Include="DBU.py" />
     <Compile Include="DBWK.py" />
-    <Compile Include="DMtest.py" />
+    <Compile Include="DmarketDBupdate.py" />
     <Compile Include="targetCreator.py" />
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +36,7 @@
     <Content Include="About.html" />
     <Content Include="HTMLPage1.html" />
     <Content Include="HTMLPage2_DB.html" />
+    <Content Include="HTMLPage2_DMDB.html" />
     <Content Include="style1.css" />
     <Content Include="style2.css" />
   </ItemGroup>

@@ -1,30 +1,23 @@
-from pandas import DataFrame
-from pymongo import MongoClient
-from flask import Flask, render_template, request
-import requests
-from flask import request
-from DBWK import get_database
 import json
+import requests
+from pymongo import MongoClient
+from DBWK import get_database
 
-url = "https://steamcommunity.com/market/search/render/?query=&start=0&count=100&search_descriptions=0&appid=730&norender=1"
+url = "https://steamcommunity.com/market/search/render/?query=&start=0&count=10000&search_descriptions=0&appid=730&norender=1"
 response = requests.get(url)
-data = json.loads(response.text)
+data2 = json.loads(response.text)
 
-with open('data.json', 'w') as outfile:
-    json.dump(data, outfile)
+# записати оновлені дані у файл data.json
+with open('data2.json', 'w') as outfile:
+    json.dump(data2, outfile)
 
+# оновити дані в колекції MongoDB
+db = get_database()
+collection_name = db["user_1_items"]
 
-dbname = get_database()
-collection_name = dbname["user_1_items"]
-with open('data.json') as f:
-    data = json.load(f)
-collection_name.insert_many(data['results'])
-
-# Додавання отриманих даних до таблиці MongoDB
-"""if response.status_code == 200:
-    items = response.json()['response']
-    for item in items:
-        collection_name.insert_one(item)
-        print("Додано: ", item['name'])
-else:
-    print("Помилка: ", response.status_code)"""
+for result in data2['results']:
+    collection_name.update_many(
+        {"name": result['name']}, 
+        {"$set": result}, 
+        upsert=True
+    )

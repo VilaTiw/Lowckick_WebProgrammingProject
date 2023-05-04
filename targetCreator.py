@@ -48,5 +48,6 @@ headers = {
     "X-Sign-Date": nonce
 }
 
-resp = requests.post(rootApiUrl + api_url_path, json=body, headers=headers)
-print(resp.text)
+"""resp = requests.post(rootApiUrl + api_url_path, json=body, headers=headers)
+print(resp.text)"""
+print(offer_from_market)
