@@ -41,3 +41,10 @@ Configure Gunicorn for Heroku deployment.
 
 Holovko Uaroslav
 holovckouaroslav@gmail.com
+
+## Lab 3:
+Added ability to search and filter database content
+<br>
+Taras Rohulya:https://github.com/Tarasukk/Web;
+
+Pull link:https://github.com/Tarasukk/WebProgrammingProject/commit/33909ade02d1c6ea585bf72fd8f496844bdd2ee6;
