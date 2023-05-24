@@ -9,6 +9,33 @@
             font-family: Arial, sans-serif;
             background-color: #F2F2F2;
         }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }        
 
         header {
             background-color: #007bff;
@@ -26,18 +53,33 @@
 
         form {
             margin: 20px auto;
-            width: 60%;
-            text-align: center;
+            width: 70%;
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
         }
 
-            input[type="submit"]:hover {
-                background-color: #0056b3;
-            }
+        #about-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #about-link:hover {
+            background-color: #0056b3;
+        }
+
 
         footer {
             background-color: #007bff;
             color: #fff;
-            padding: 10px;
+            padding: 1px;
             text-align: center;
             position: fixed;
             bottom: 0;
@@ -74,33 +116,58 @@
     <header>
         <h1>CS:GO Skins Database</h1>
     </header>
-    <a href="localhost:8000/HTMLPage1.html" id="database-link">Search Engine</a>
+    <a href="localhost:5000/HTMLPage1.html" id="database-link">Search Engine</a
+    href="http://localhost:5000/auth"><img alt=""
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Steam_logo.svg/2560px-Steam_logo.svg.png" style="height:30px; width:80px" /></a></p>
+
     <footer>
-        <p>© 2023 CS:GO SE</p>
+        <p>© 2023 CS:GO SE Holovko Uaroslav</p>
+        <a href="localhost:5000/About.html" id="about-link"></a>
     </footer>
     <table>
         <thead>
             <tr>
-                <th>Paint Seed</th>
                 <th>Item Name</th>
-                <th>Float</th>
-                <th>Condition</th>
-                <th>Market Price</th>
-                <th>Float Cap</th>
+                <th>Listings</th>
+                <th>Sell price</th>
+                <th>Buyorder price</th>
+                <th>Type</th>
             </tr>
         </thead>
         <tbody>
             {% for item in data %}
             <tr>
-                <td>{{ item['Paint_seed'] }}</td>
-                <td>{{ item['item_name'] }}</td>
-                <td>{{ item['Float'] }}</td>
-                <td>{{ item['Condition'] }}</td>
-                <td>{{ item['Market_price'] }}</td>
-                <td>{{ item['Float_cap'] }}</td>
+                <td>{{ item['name'] }}</td>
+                <td>{{ item['sell_listings'] }}</td>
+                <td>{{ item['sell_price_text'] }}</td>
+                <td>{{ item['sale_price_text'] }}</td>
+                <td>{{ item['asset_description']['type'] }}</td>
+
             </tr>
             {% endfor %}
         </tbody>
     </table>
+
+    <form action="#" method="POST">
+        <label for="name">Item Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="sell_listing">Listings:</label>
+        <input type="number" id="listings" name="listings" required><br><br>
+
+        <label for="sell_price_text">Sell price:</label>
+        <input type="text" id="sell price" name="sell price" step="0.00000000000001" required><br><br>
+
+        <label for="sale_price_text">Buyorder price:</label>
+        <input type="text" id="buyorder price" name="buyorder price" step="0.00000000000001" required><br><br>
+        
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type" step="0.01" required><br><br>
+
+        <label for="icon_url">Icon:</label>
+        <input type="url" id="icon_url" name="icon_url" required><br><br>
+
+        <input type="submit" value="Add Item">
+    </form>
 </body>
 </html>
